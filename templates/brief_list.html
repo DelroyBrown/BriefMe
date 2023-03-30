@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Web Briefs</h1>
+    <ul>
+    {% for brief in briefs %}
+        <li>
+            <h2>{{ brief.title }}</h2>
+            <p>{{ brief.description }}</p>
+            <p>Created at: {{ brief.created_at }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+{% endblock %}
